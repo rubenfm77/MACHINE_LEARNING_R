@@ -1,4 +1,4 @@
-# Employee Attrition Prediction — ML Capstone in R
+# 👥 Employee Attrition Prediction — ML Capstone in R
 
 [![R](https://img.shields.io/badge/R-4.2+-blue?logo=r)](https://www.r-project.org/)
 [![H2O](https://img.shields.io/badge/H2O-AutoML-yellow)](https://h2o.ai)
@@ -8,7 +8,7 @@
 
 ---
 
-## Repository Contents
+## 📁 Repository Contents
 
 ```
 MACHINE_LEARNING_R/
@@ -22,15 +22,15 @@ The companion **Power BI dashboard** (HR Attrition) lives in the [POWER-BI repo]
 
 ---
 
-## The Problem
+## ❓ The Problem
 
 Employee turnover costs organisations an average of **1–2× annual salary** per departure. The IBM HR dataset (16.1% attrition rate — above the industry benchmark of 10%) provides a realistic testbed for building an early-warning model that identifies at-risk profiles before they resign.
 
 ---
 
-## Approach
+## 🔬 Approach
 
-### 1. Exploratory Data Analysis
+### 📊 1. Exploratory Data Analysis
 
 Full EDA across all 35 variables before any modelling:
 
@@ -42,7 +42,7 @@ Full EDA across all 35 variables before any modelling:
 - **Satisfaction scores:** Employees who leave score lower on both job satisfaction and environment satisfaction; the gap is most pronounced among low-salary earners
 - **Tenure patterns:** Employees with 0–1 years at the company (and 1 previous employer) have the highest early-exit rate, suggesting onboarding and early-career support gaps
 
-### 2. Feature Engineering & Preprocessing
+### ⚙️ 2. Feature Engineering & Preprocessing
 
 - Target variable `Attrition` recoded to binary (1 = Yes, 0 = No)
 - Min-max normalisation applied to high-range numeric variables (MonthlyIncome, MonthlyRate, etc.) to prevent gradient distortion
@@ -51,7 +51,7 @@ Full EDA across all 35 variables before any modelling:
 - Class imbalance addressed via `balance_classes = TRUE` in H2O (14.2% positive rate)
 - Correlation analysis: `Age` and `JobLevel` highly correlated (removed redundancy); `PerformanceRating` and `PercentSalaryHike` correlated
 
-### 3. Model Bake-off
+### 🏆 3. Model Bake-off
 
 Four algorithm families compared on AUC (Area Under ROC Curve):
 
@@ -66,7 +66,7 @@ All models used 5-fold cross-validation and class balancing.
 
 ---
 
-## Key Dashboard Visuals
+## 📊 Key Dashboard Visuals
 
 **Power BI HR Dashboard — Page 1: Attrition Overview**
 
@@ -78,7 +78,7 @@ All models used 5-fold cross-validation and class balancing.
 
 ---
 
-## Conclusions
+## 🎯 Conclusions
 
 **Model performance and what it means in practice**
 
@@ -101,9 +101,9 @@ SHRM identifies compensation, career development, flexibility, and leadership as
 **Business implications**
 
 These models don't just flag who might leave — they point to which interventions are most cost-effective:
-- Eliminating mandatory overtime for Lab Technicians and Sales Reps would directly target the two highest-volume attrition roles
-- A salary benchmarking exercise for employees at the bottom quartile of their job level would address the strongest salary signal the model finds
-- A structured 90-day onboarding programme aimed at the 0–1 year tenure group would address the early-exit cohort
+- Eliminating mandatory overtime for Lab Technicians and Sales Reps targets the two highest-volume attrition roles directly
+- A salary benchmarking exercise for employees in the bottom quartile of their job level addresses the strongest salary signal the model finds
+- A structured 90-day onboarding programme for the 0–1 year tenure group addresses the early-exit cohort
 - Monitoring performance ratings below 3.5 combined with below-median salary is the simplest early-warning rule derivable from this data
 
 **Model maintenance**
@@ -112,7 +112,7 @@ Like any production attrition model, this should be retrained quarterly as the w
 
 ---
 
-## Tech Stack
+## 🛠️ Tech Stack
 
 | Tool | Use |
 |---|---|
@@ -124,7 +124,7 @@ Like any production attrition model, this should be retrained quarterly as the w
 
 ---
 
-## References
+## 📚 References
 
 - [IBM HR Analytics Dataset — Kaggle](https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset)
 - [H2O AutoML documentation](https://docs.h2o.ai/)
